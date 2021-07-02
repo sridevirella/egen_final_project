@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-pick_order-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: PICK_ORDER
+            columns:
+              - column:
+                  name: pick_id
+                  type: uuid DEFAULT uuid_generate_v4 ()
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_warehouse_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_store_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_created_at
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_qty
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_tote_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_status
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_tote_cart_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_method_type
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_emp_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

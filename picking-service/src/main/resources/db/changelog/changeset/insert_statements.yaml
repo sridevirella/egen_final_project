@@ -1,0 +1,134 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_into_table
+      author: Sri
+      changes:
+        - insert:
+            tableName: pick_employee
+            columns:
+              - column:
+                  name: pick_emp_id
+                  value: "EMP1"
+              - column:
+                  name: pick_emp_first_name
+                  value: "Brian"
+              - column:
+                  name: pick_emp_last_name
+                  value: "Adams"
+              - column:
+                  name: pick_emp_occupied
+                  value: f
+              - column:
+                  name: store_id
+                  value: "store1"
+        - insert:
+            tableName: pick_employee
+            columns:
+              - column:
+                  name: pick_emp_id
+                  value: "EMP2"
+              - column:
+                  name: pick_emp_first_name
+                  value: "John"
+              - column:
+                  name: pick_emp_last_name
+                  value: "Lenon"
+              - column:
+                  name: pick_emp_occupied
+                  value: f
+              - column:
+                  name: store_id
+                  value: "store1"
+        - insert:
+            tableName: pick_items_subst
+            columns:
+              - column:
+                  name: pick_subst_item_id
+                  value: "Item3"
+              - column:
+                  name: pick_item_id
+                  value: "Item1"
+              - column:
+                  name: pick_item_hght
+                  value: "5 cm"
+              - column:
+                  name: pick_item_wdth
+                  value: "4 cm"
+              - column:
+                  name: pick_item_lenght
+                  value: "6 cm"
+              - column:
+                  name: pick_item_wght
+                  value: "9 cm"
+              - column:
+                  name: pick_item_price
+                  value: 20.0
+        - insert:
+            tableName: pick_items_subst
+            columns:
+              - column:
+                  name: pick_subst_item_id
+                  value: "Item4"
+              - column:
+                  name: pick_item_id
+                  value: "Item2"
+              - column:
+                  name: pick_item_hght
+                  value: "5 cm"
+              - column:
+                  name: pick_item_wdth
+                  value: "5 cm"
+              - column:
+                  name: pick_item_lenght
+                  value: "6 cm"
+              - column:
+                  name: pick_item_wght
+                  value: "8 cm"
+              - column:
+                  name: pick_item_price
+                  value: 30.0
+        - insert:
+            tableName: pick_store_item
+            columns:
+              - column:
+                  name: pick_store_item_id
+                  value: "1"
+              - column:
+                  name: pick_store_name
+                  value: "store1"
+              - column:
+                  name: item_availability
+                  value: f
+              - column:
+                  name: item_id
+                  value: "Item1"
+        - insert:
+            tableName: pick_store_item
+            columns:
+              - column:
+                  name: pick_store_item_id
+                  value: "2"
+              - column:
+                  name: pick_store_name
+                  value: "store1"
+              - column:
+                  name: item_availability
+                  value: t
+              - column:
+                  name: item_id
+                  value: "Item2"
+        - insert:
+            tableName: pick_store_item
+            columns:
+              - column:
+                  name: pick_store_item_id
+                  value: "3"
+              - column:
+                  name: pick_store_name
+                  value: "store1"
+              - column:
+                  name: item_availability
+                  value: t
+              - column:
+                  name: item_id
+                  value: "Item3"

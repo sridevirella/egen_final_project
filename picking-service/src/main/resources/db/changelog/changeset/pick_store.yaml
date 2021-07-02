@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-pick_store-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: pick_store_item
+            columns:
+              - column:
+                  name: pick_store_item_id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_store_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: item_availability
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: item_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

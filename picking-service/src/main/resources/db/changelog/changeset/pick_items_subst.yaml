@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-pick_items_subst-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: PICK_ITEMS_SUBST
+            columns:
+              - column:
+                  name: pick_subst_item_id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_item_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_hght
+                  type: varchar(255)
+                  constraints:
+                      nullable: false
+              - column:
+                  name: pick_item_wdth
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_lenght
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_wght
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_price
+                  type: double
+                  constraints:
+                    nullable: false
+

@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-pick_employees-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: PICK_EMPLOYEE
+            columns:
+              - column:
+                  name: pick_emp_id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_emp_first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_emp_last_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_emp_occupied
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: store_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

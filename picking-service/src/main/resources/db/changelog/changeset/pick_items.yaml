@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-pick_items-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: PICK_ITEM
+            columns:
+              - column:
+                  name: id
+                  type: uuid DEFAULT uuid_generate_v4 ()
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_item_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_hght
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_wdth
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_lenght
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_item_wght
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_order_item_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_pick_items
+                    references: PICK_ORDER_ITEM(pick_order_item_id)
+              - column:
+                  name: pick_zone
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-employee_performance-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: EMPLOYEES_PERFORMANCE
+            columns:
+              - column:
+                  name: pick_emp_perf_id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_emp_perf_start_dt_tm
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_emp_perf_end_dt_tm
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_method_type
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_emp_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

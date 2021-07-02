@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: craete-pick_order_items-table
+      author: Sri
+      changes:
+        - createTable:
+            tableName: PICK_ORDER_ITEM
+            columns:
+              - column:
+                  name: pick_order_item_id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pick_order_item_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_order_item_qty
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_order_item_hght
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_order_item_wdth
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_order_item_length
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_is_subst_allowed
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pick_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_pick_order_item
+                    references: PICK_ORDER(pick_id)
